@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorTest\\SetColorTest.csproj": {}
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorTest\\SetColorTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorTest\\SetColorTest.csproj": {
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorTest\\SetColorTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorTest\\SetColorTest.csproj",
+        "projectUniqueName": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorTest\\SetColorTest.csproj",
         "projectName": "SetColorTest",
-        "projectPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorTest\\SetColorTest.csproj",
+        "projectPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorTest\\SetColorTest.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorTest\\obj\\",
+        "outputPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

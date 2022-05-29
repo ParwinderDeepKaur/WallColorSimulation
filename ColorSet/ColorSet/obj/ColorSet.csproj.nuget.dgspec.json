@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\ColorSet\\ColorSet.csproj": {}
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\ColorSet\\ColorSet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\ColorSet\\ColorSet.csproj": {
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\ColorSet\\ColorSet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\ColorSet\\ColorSet.csproj",
+        "projectUniqueName": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\ColorSet\\ColorSet.csproj",
         "projectName": "ColorSet",
-        "projectPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\ColorSet\\ColorSet.csproj",
+        "projectPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\ColorSet\\ColorSet.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\ColorSet\\obj\\",
+        "outputPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\ColorSet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -33,8 +33,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
-                "projectPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj"
+              "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
+                "projectPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj"
               }
             }
           }
@@ -63,7 +63,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.15, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
@@ -73,7 +73,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.15, )"
+              "version": "[5.0.17, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -106,14 +106,14 @@
         }
       }
     },
-    "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
+        "projectUniqueName": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
         "projectName": "SetColorLibrary",
-        "projectPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
+        "projectPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\obj\\",
+        "outputPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",

@@ -12,7 +12,8 @@ namespace SetColorLibrary.Data
     {
 
         public DbSet<wallColor> WallColors { get; set; }
-   
+        public DbSet<floorColor> floorColors { get; set; }
+
 
         public string DbPath { get; private set; }
 

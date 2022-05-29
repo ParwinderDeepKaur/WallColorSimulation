@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mmtqj8Z71C0qhcLLjtoZHg/HFFMyjxymbJiwfL1KyMISVHc6xsRW/47hB7xon9xYPjXsk8b0GdjAJ5iVwDgXcg==",
+  "dgSpecHash": "B++zwetF9qYBAdJFisXdGF1tddijQ03/RYgAQJIscJHMuexeR9Y36aO5FC4fPdYbiP5xedHLKDcVEvnhrqhFBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\ColorSet\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
+  "projectFilePath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.12\\microsoft.aspnetcore.cryptography.internal.5.0.12.nupkg.sha512",
