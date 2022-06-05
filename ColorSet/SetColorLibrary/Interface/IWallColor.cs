@@ -16,7 +16,11 @@ namespace SetColorLibrary.Interface
         /// <returns></returns>
          Task<IList<wallColor>> GetWallColorList();
 
-
+        /// <summary>
+        /// ddl list
+        /// </summary>
+        /// <returns></returns>
+        SelectList GetWallDDL();
 
 
         /// <summary>

@@ -1,10 +1,189 @@
 ﻿@page
+
 @model IndexModel
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @{
     ViewData["Title"] = "Home page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+
+
+<style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button4 {
+        background-color: #e7e7e7;
+        color: black;
+    }
+    /* Gray */ 
+    :root {
+        --turnSpeed: 40s;
+        --speed: 300s;
+    }
+
+    body {
+        /* background-color: #000; */
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        perspective: 10em;
+        perspective-origin: 50% calc(50% - 2em);
+        overflow: hidden;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .scene {
+        position: relative;
+        transform-style: preserve-3d;
+    }
+
+
+
+
+    .ceiling, .frontWall, .leftWall, .rightWall {
+        position: absolute;
+        background-color: #222297;
+        /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #222297 1em ), repeating-linear-gradient( #03076055, #030760 ); */
+        width: 20em;
+        height: 20em;
+        top: -16em;
+        left: -10em;
+        transform: translateZ(-10em);
+    }
+
+    .leftWall {
+        left: -20em;
+        transform: rotateY(-90deg);
+    }
+
+    .rightWall {
+        transform: rotateY(90deg);
+        left: 0;
+    }
+
+    .floor {
+        background-color: #000;
+        /* background-image:  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%,); */
+        background-position: 1em 0, 1em 0, 0 0, 0 0;
+        background-size: 1em 1em;
+        background-repeat: repeat;
+        width: 20em;
+        height: 20em;
+        top: 1em;
+        z-index: 0;
+        position: absolute;
+        transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+    }
+
+    .ceiling {
+        background-color: #0a0a5c;
+        /* background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #222297 17px ), repeating-linear-gradient( #03076055, #030760 ); */
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -55%) rotateX(90deg) translateZ(15em);
+    }
+
+    .frontWall {
+        clip-path: polygon(0% 0%, 0% 100%, 33% 100%, 33% 39%, 67% 39%, 68% 100%, 33% 100%, 33% 100%, 100% 100%, 100% 0%);
+    }
+
+
+
+
+
+
+    #controls {
+        position: fixed;
+        z-index: 100;
+        width: 5em;
+        bottom: 2em;
+        margin-left: -2.5em;
+        left: 50%;
+        font-size: 5vmin;
+    }
+
+
+    /*Safari only hack*/
+    @@supports (-webkit-backdrop-filter: blur(1px)) {
+        #controls {
+            top: 40%;
+        }
+    }
+
+    .flex-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .col {
+        width: 32%;
+        text-align: center;
+    }
+
+    #controls a:link, #controls a:visited {
+        text-decoration: none;
+        color: rgb(250, 255, 0);
+        /* text-shadow: 2px 2px #000; */
+    }
+</style>
+
+
+
+
+<div style="position: absolute; left: 1166px; top: 10px; font-size: 24px;">
+    @if (SignInManager.IsSignedIn(User))
+    {
+
+ <a style="position: absolute; top: 17px; left: -75px;" class="nav-link text-dark"  asp-page="/Admin/floorColor/Index" title="Manage">Admin</a>
+<form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+    <button style="float:right" type = "submit" class="button button4">Logout</button>
+</form>
+}
+else
+{
+<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+
+<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+
+}
+
 </div>
+
+<div style="transform: translateZ(-42rem); position:fixed" class="scene">
+    <div class="ceiling"></div>
+    <div class="frontWall"></div>
+    <div class="leftWall"></div>
+    <div class="rightWall"></div>
+    <div class="floor"></div>
+</div>
+
+
+
+
+
+@*<select>
+    @foreach (var item in ViewBag.wallColor.Result)
+    {
+        <option value="value">@item.Color</option>
+    }
+    </select>*@
+

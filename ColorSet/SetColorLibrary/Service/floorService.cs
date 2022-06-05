@@ -31,7 +31,16 @@ namespace SetColorLibrary.Service
             return color;
         }
 
-       
+
+        public SelectList GetFloorDDL()
+        {
+
+            var list = new SelectList(_context.floorColors, "Id", "Color");
+
+            return list;
+        }
+
+
 
         /// <summary>
         /// get floor color by id

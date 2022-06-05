@@ -27,6 +27,12 @@ namespace SetColorLibrary.Interface
          Task<floorColor> GetFloorColorById(int id);
 
         /// <summary>
+        /// ddl list
+        /// </summary>
+        /// <returns></returns>
+        SelectList GetFloorDDL();
+
+        /// <summary>
         /// create record
         /// </summary>
         /// <param name="color"></param>

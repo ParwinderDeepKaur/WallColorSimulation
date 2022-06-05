@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using SetColorLibrary.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,16 +12,26 @@ namespace ColorSet.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+       
+        private readonly IWallColor _color;
+        private readonly IFloorColor _floorColor;
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(IWallColor color, IFloorColor floorColor)
         {
-            _logger = logger;
+            _color = color;
+            _floorColor = floorColor;
         }
 
-        public void OnGet()
+       
+        public async void OnGet()
         {
 
+            ViewData["wallColor"] = _color.GetWallColorList();
+            ViewData["floorColor"] = _floorColor.GetFloorColorList();
+            
+
         }
+
+        
     }
 }

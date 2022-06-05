@@ -31,7 +31,16 @@ namespace SetColorLibrary.Service
             return color;
         }
 
-       
+
+        public SelectList GetWallDDL()
+        {
+
+            var list = new SelectList(_context.WallColors, "Id", "Color");
+
+            return list;
+        }
+
+
 
         /// <summary>
         /// get wall color by id
