@@ -13,17 +13,3 @@ C:\Users\DELL\source\repos\ColorSet\SetColorLibrary\obj\Debug\net5.0\ref\SetColo
 C:\Users\DELL\source\repos\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.pdb
 C:\Users\DELL\source\repos\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.genruntimeconfig.cache
 C:\Users\DELL\source\repos\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.csproj.AssemblyReference.cache
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\SetColorLibrary.deps.json
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\SetColorLibrary.runtimeconfig.json
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\SetColorLibrary.runtimeconfig.dev.json
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\SetColorLibrary.dll
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\ref\SetColorLibrary.dll
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\bin\Debug\net5.0\SetColorLibrary.pdb
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.GeneratedMSBuildEditorConfig.editorconfig
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.AssemblyInfoInputs.cache
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.AssemblyInfo.cs
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.csproj.CoreCompileInputs.cache
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.dll
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\ref\SetColorLibrary.dll
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.pdb
-D:\Cambrian Classes\Semester 3\WallColorSimulation\ColorSet\SetColorLibrary\obj\Debug\net5.0\SetColorLibrary.genruntimeconfig.cache
