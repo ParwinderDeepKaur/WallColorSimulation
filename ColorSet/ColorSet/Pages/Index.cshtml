@@ -143,12 +143,106 @@
         color: rgb(250, 255, 0);
         /* text-shadow: 2px 2px #000; */
     }
+
+    button.print-button {
+        width: 100px;
+        height: 100px;
+    }
+
+        span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+            border: solid 4px #333;
+        }
+
+            span.print-icon::after {
+                border-width: 2px;
+            }
+
+    button.print-button {
+        position: relative;
+        padding: 0;
+        border: 0;
+        border: none;
+        background: transparent;
+    }
+
+        span.print-icon, span.print-icon::before, span.print-icon::after, button.print-button:hover .print-icon::after {
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+    span.print-icon {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+        margin-top: 20%;
+        width: 60%;
+        height: 35%;
+        background: #fff;
+        border-radius: 20% 20% 0 0;
+    }
+
+        span.print-icon::before {
+            content: " ";
+            position: absolute;
+            bottom: 100%;
+            left: 12%;
+            right: 12%;
+            height: 110%;
+            transition: height .2s .15s;
+        }
+
+        span.print-icon::after {
+            content: " ";
+            position: absolute;
+            top: 55%;
+            left: 12%;
+            right: 12%;
+            height: 0%;
+            background: #fff;
+            background-repeat: no-repeat;
+            background-size: 70% 90%;
+            background-position: center;
+            background-image: linear-gradient( to top, #fff 0, #fff 14%, #333 14%, #333 28%, #fff 28%, #fff 42%, #333 42%, #333 56%, #fff 56%, #fff 70%, #333 70%, #333 84%, #fff 84%, #fff 100% );
+            transition: height .2s, border-width 0s .2s, width 0s .2s;
+        }
+
+    button.print-button:hover {
+        cursor: pointer;
+    }
+
+        button.print-button:hover .print-icon::before {
+            height: 0px;
+            transition: height .2s;
+        }
+
+        button.print-button:hover .print-icon::after {
+            height: 120%;
+            transition: height .2s .15s, border-width 0s .16s;
+        }
+
+    .button-color {
+        color: #f7f5f2;
+    }
+
+    .hide-data {
+        display: none;
+    }
+
+    @@media print {
+        .print-hide {
+            display: none;
+        }
+
+        .hide-data {
+            display: initial;
+        }
+    }
 </style>
 
 
 
 
-<div style="position: absolute; left: 1166px; top: 10px; font-size: 24px;">
+<div class="print-hide" style="position: absolute; left: 1166px; top: 10px; font-size: 24px;">
     @if (SignInManager.IsSignedIn(User))
     {
 
@@ -168,6 +262,7 @@
 </div>
 
 <div style="transform: translateZ(-42rem); position:fixed" class="scene">
+
     <div id="ceiling" class="ceiling"></div>
     <div id="frontWall" class="frontWall"></div>
     <div id="leftWall" class="leftWall"></div>
@@ -178,73 +273,149 @@
 
 
 
-<div style="position: absolute; top: 19px; left: 19px;">
+<div class="print-hide" style="position: absolute; top: 19px; left: 19px;">
     <div>
         <label disabled="disabled" style="font-size: 19px;">Front Wall Color</label>
     </div>
     <div style="width: 296px; height: 257px; overflow-y: scroll;">
         @foreach (var item in ViewBag.wallColor.Result)
         {
-        <button type="button" onclick="front('@item.Color')" class="button button4" style="background-color:@item.Color">@item.Color</button>
-           
+            <button type="button" onclick="front('@item.Color')" class=" button-color button button4" style="background-color:@item.Color">@item.Color</button>
+
         }
     </div>
 </div>
 
 
-<div style="position: absolute; top: 450px; left: 23px;">
+<div class="print-hide" style="position: absolute; top: 450px; left: 23px;">
     <div>
         <label style="font-size: 19px;">Right Wall Color</label>
     </div>
     <div style="width: 296px; height: 257px; overflow-y: scroll;">
         @foreach (var item in ViewBag.wallColor.Result)
         {
-            <button type="button" onclick="right('@item.Color')" class="button button4" style="background-color:@item.Color">@item.Color</button>
+            <button type="button" onclick="right('@item.Color')" class=" button-color button button4" style="background-color:@item.Color">@item.Color</button>
 
         }
     </div>
 </div>
 
 
-<div style="position: absolute; top: 450px; left: 368px;">
+<div class="print-hide" style="position: absolute; top: 450px; left: 355px;">
     <div>
         <label style="font-size: 19px;">Left Wall Color</label>
     </div>
-  <div style="width: 296px; height: 257px; overflow-y: scroll;">
+    <div style="width: 296px; height: 257px; overflow-y: scroll;">
         @foreach (var item in ViewBag.wallColor.Result)
         {
-            <button type="button" onclick="left('@item.Color')" class="button button4" style="background-color:@item.Color">@item.Color</button>
+            <button type="button" onclick="left('@item.Color')" class=" button-color button button4" style="background-color:@item.Color">@item.Color</button>
 
         }
     </div>
 </div>
 
-<div style="position: absolute; top: 450px; left: 716px;">
+<div class="print-hide" style="position: absolute; top: 450px; left: 700px;">
     <div>
         <label style="font-size: 19px;">Ceiling Color</label>
     </div>
     <div style="width: 296px; height: 257px; overflow-y: scroll;">
         @foreach (var item in ViewBag.wallColor.Result)
         {
-            <button type="button" onclick="ceiling('@item.Color')" class="button button4" style="background-color:@item.Color">@item.Color</button>
-
+            <button type="button" onclick="ceiling('@item.Color')" class=" button-color button button4" style="background-color:@item.Color">@item.Color</button>
         }
     </div>
 </div>
 
-<script >
+<div class="print-hide" style="position: absolute; top: 450px; left: 1041px;">
+    <div>
+        <label style="font-size: 19px;">Floor Color</label>
+    </div>
+    <div style="width: 296px; height: 257px; overflow-y: scroll;">
+        @foreach (var item in ViewBag.floorColor.Result)
+        {
+            <button type="button" onclick="floor('@item.Color')" class=" button-color button button4" style="background-color:@item.Color">@item.Color</button>
+        }
+    </div>
+</div>
+<div class="print-hide" style="position: absolute; top:75px; left: 1185px;">
+    <button title="Print" onclick="window.print()" class="print-button"><span class="print-icon"></span></button>
+</div>
+
+<div class="hide-data" style="position: absolute; top: 600px; left: 200px;">
+
+    <div>
+        <div>
+            <label style="font-size: 19px;">Front Wall Color</label>
+        </div>
+        <button id="frontPrintWall" type="button" class="button button4"></button>
+
+        <div>
+            <label style="font-size: 19px;">Right Wall Color</label>
+        </div>
+        <button id="rightPrintWall" type="button" class="button button4"></button>
+
+        <div>
+            <label style="font-size: 19px;">Left Wall Color</label>
+        </div>
+        <button id="leftPrintWall" type="button" class="button button4"></button>
+    </div>
+    <div style="position: absolute; left: 168px; top: 1px; width: 100px;">
+        <div>
+            <label style="font-size: 19px;">Celing Color</label>
+        </div>
+        <button id="ceilingPrint" type="button" class="button button4"></button>
+
+        <div>
+            <label style="font-size: 19px;">Floor Color</label>
+        </div>
+        <button id="floorColor" type="button" class="button button4"></button>
+    </div>
+</div>
+<script type="text/javascript" src="https://chir.ag/projects/ntc/ntc.js"></script>
+
+
+<script type="text/javascript">
+
     function front(color) {
         document.getElementById("frontWall").style.backgroundColor = color;
+        document.getElementById("frontPrintWall").style.backgroundColor = color;
+        document.getElementById("frontPrintWall").innerHTML = getColorName(color);
+       
     }
+
     function right(color) {
         document.getElementById("rightWall").style.backgroundColor = color;
+        document.getElementById("rightPrintWall").style.backgroundColor = color;
+        document.getElementById("rightPrintWall").innerHTML = getColorName(color);
     }
+
     function left(color) {
         document.getElementById("leftWall").style.backgroundColor = color;
+        document.getElementById("leftPrintWall").style.backgroundColor = color;
+        document.getElementById("leftPrintWall").innerHTML = getColorName(color);
     }
 
     function ceiling(color) {
         document.getElementById("ceiling").style.backgroundColor = color;
+        document.getElementById("ceilingPrint").style.backgroundColor = color;
+        document.getElementById("ceilingPrint").innerHTML = getColorName(color);
     }
+
+    function floor(color) {
+        document.getElementById("floor").style.backgroundColor = color;
+        document.getElementById("floorColor").style.backgroundColor = color;
+        document.getElementById("floorColor").innerHTML = getColorName(color);
+    }
+
+
+    function getColorName(color) {
+
+
+        var n_match = ntc.name(color);
+      
+        n_name = n_match[1]; // Text string: Color name
+
+        return n_name;
+    }
+
 </script>
- 

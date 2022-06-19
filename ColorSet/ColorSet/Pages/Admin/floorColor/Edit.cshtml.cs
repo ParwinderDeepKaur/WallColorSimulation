@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -9,9 +10,11 @@ using Microsoft.EntityFrameworkCore;
 using SetColorLibrary.Data;
 using SetColorLibrary.Interface;
 using SetColorLibrary.Models;
+using System.Drawing;
 
 namespace ColorSet.Pages.Admin.floorColor
 {
+    [Authorize]
     public class EditModel : PageModel
     {
         private readonly IFloorColor _color;
@@ -39,6 +42,8 @@ namespace ColorSet.Pages.Admin.floorColor
             }
             return Page();
         }
+
+ 
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see https://aka.ms/RazorPagesCRUD.

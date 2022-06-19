@@ -25,5 +25,9 @@ namespace SetColorLibrary.Models
         public string Color { get; set; }
 
 
+      
+        public string ColorName { get; set; }
+
+
     }
 }

@@ -1,25 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {}
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
+    "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
+        "projectUniqueName": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
         "projectName": "SetColorLibrary",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
-        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\ColorSet\\SetColorLibrary\\obj\\",
+        "projectPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\SetColorLibrary.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Cambrian Classes\\Semester 3\\WallColorSimulation\\ColorSet\\SetColorLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
