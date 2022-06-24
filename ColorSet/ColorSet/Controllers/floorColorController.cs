@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SetColorLibrary.Interface;
+using SetColorLibrary.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,36 +15,50 @@ namespace ColorSet.Controllers
     [ApiController]
     public class floorColorController : ControllerBase
     {
+
+        private readonly IFloorColor _color;
+
+        public floorColorController(IFloorColor color)
+        {
+            _color = color;
+        }
+
         // GET: api/<floorWallController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<floorColor>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _color.GetFloorColorList();
         }
 
         // GET api/<floorWallController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<floorColor> Get(int id)
         {
-            return "value";
+            return await _color.GetFloorColorById(id);
         }
 
         // POST api/<floorWallController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async void Post([FromBody] floorColor value)
         {
+
+            await _color.CreateAsync(value);
+
         }
 
         // PUT api/<floorWallController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async void Put([FromBody] floorColor value)
         {
+            await _color.UpdateAsync(value);
         }
 
         // DELETE api/<floorWallController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async void Delete(int id)
         {
+            var getRecord = await _color.GetFloorColorById(id);
+            await _color.DeleteAsysn(getRecord);
         }
     }
 }

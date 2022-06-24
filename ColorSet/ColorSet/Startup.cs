@@ -72,6 +72,16 @@ namespace ColorSet
             {
                 endpoints.MapRazorPages();
             });
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
+
+
+            });
         }
     }
 }
